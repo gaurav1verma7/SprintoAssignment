@@ -21,7 +21,7 @@ export class HomePage extends BasePage {
   async clickAndSelectFrom(cityName) {
     await this.page.getByText(PageConstants.TEXT_FROM, { exact: true }).click();
     await this.page.getByPlaceholder(PageConstants.TEXT_FROM).type(cityName);
-    await this.page.getByText(cityName, { exact: true }).click();
+    await this.page.getByText(cityName, { exact: true }).first().click();
   }
 
   async clickToandSelectInternationalTrip() {
