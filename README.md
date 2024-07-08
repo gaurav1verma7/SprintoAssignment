@@ -4,35 +4,23 @@
 This repository contains an end-to-end testing framework using Playwright. The structure is designed for the Sprinto interview process.
 
 ## Folder structure
+```
 ├── constants                      # Constants folder
-
 │   └── PageConstants.js           # Constants related to pages
-
 ├── package-lock.json              # Lock file for dependency versions
-
 ├── package.json                   # Project configuration and dependencies
-
 ├── pages                          # Page objects folder
-
 │   ├── BasePage.js                # Base page object
-
 │   ├── HomePage.js                # Home page object
-
 │   ├── InternationalTrip.js       # International trip page object
-
 │   ├── TripFaresAndFlights.js     # Trip fares and flights page object
-
 │   └── common.js                  # Common utilities for page objects
-
 ├── playwright.config.js           # Playwright configuration file
-
 ├── resources                      # Resources folder
-
 │   └── screenshotReports          # Directory for screenshot reports
-
 └── tests                          # Tests folder
-
     └── makeMyTrip.spec.js         # Test file for MakeMyTrip application
+```
 
 ## Test Cases
 ### makeMyTrip.spec.js
