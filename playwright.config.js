@@ -16,26 +16,26 @@ module.exports = defineConfig({
     ignoreHTTPSErrors: true,
   },
   projects: [
-    {
-      name: "chromium",
-      use: {
-        ...devices["Desktop Chrome"],
-        channel: "chrome",
-        headless: true,
-        viewport: { width: 1220, height: 1080 },
-        args: ["--disable-http2"],
-      },
-    },
-    {
-      name: "Firefox",
-      use: {
-        ...devices["Desktop Firefox"],
-        channel: "firefox",
-        headless: true,
-        viewport: { width: 1220, height: 1080 },
-        args: ["--disable-http2"],
-      },
-    },
+    // {
+    //   name: "chromium",
+    //   use: {
+    //     ...devices["Desktop Chrome"],
+    //     channel: "chrome",
+    //     headless: true,
+    //     viewport: { width: 1220, height: 1080 },
+    //     args: ["--disable-http2"],
+    //   },
+    // },
+    // {
+    //   name: "Firefox",
+    //   use: {
+    //     ...devices["Desktop Firefox"],
+    //     channel: "firefox",
+    //     headless: true,
+    //     viewport: { width: 1220, height: 1080 },
+    //     args: ["--disable-http2"],
+    //   },
+    // },
     {
       name: "WebKit",
       use: {

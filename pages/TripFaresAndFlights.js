@@ -12,7 +12,6 @@ export class TripFaresAndFlights {
     await this.page.waitForSelector(dateFareSelectors, { timeout: 10000 });
     const dateFareElements = await this.page.locator(dateFareSelectors);
     const count = await dateFareElements.count();
-    console.log("count is " + count);
     if (count === 0) {
       console.error("No elements found with the provided selector.");
       return;
@@ -76,6 +75,14 @@ export class TripFaresAndFlights {
       .nth(minIndex)
       .locator(PageConstants.CSS_FAREPRICE)
       .innerText();
+
+    console.log(
+      "suitalbe fare price is: " +
+        optimalPrice +
+        " and date is : " +
+        minIndex +
+        1
+    );
     return optimalPrice;
   }
 
