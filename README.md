@@ -1,5 +1,5 @@
 
-# Automated Testing for MakeMyTrip International Trip Planning Featurefor Sprinto Interview 
+# Automated Testing for MakeMyTrip International Trip Planning Feature for Sprinto Interview 
 
 This repository contains an end-to-end testing framework using Playwright. The structure is designed for the Sprinto interview process.
 
@@ -55,7 +55,7 @@ Feel free to use any of the following commands supported by Playwright. See the 
 
 
 ### 4.Configuration
-The configuration for Playwright is located in `playwright.configjs.`
+The configuration for Playwright is located in `playwright.config.js`
 
 ### Author
 [@gaurav1verma7](https://github.com/gaurav1verma7)
