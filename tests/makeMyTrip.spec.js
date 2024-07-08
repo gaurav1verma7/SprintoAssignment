@@ -7,7 +7,7 @@ import { TripFaresAndFlights } from "../pages/TripFaresAndFlights";
 import fs from "fs";
 const SCREENSHOT_DIR = "./resources/screenshotReports";
 
-test("verify the fare price on makeMyTrip", async function ({
+test("verify new functionality of MakeMyTrip International Trip Planning Feature", async function ({
   page,
 }, testInfo) {
   const homePage = new HomePage(page);
@@ -39,7 +39,7 @@ test("verify the fare price on makeMyTrip", async function ({
     await tripFaresAndFlights.findMedianPriceAndOptimalDate(
       PageConstants.CSS_FAREPRICE_LIST,
       PageConstants.TEXT_DECEMBER,
-      2024
+      PageConstants.TEXT_YEAR_2024
     );
   await tripFaresAndFlights.waitUntilFlightWithFareVisible(flightMinPrice);
 });

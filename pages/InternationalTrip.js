@@ -15,6 +15,9 @@ export class InternationalTrip {
       .waitFor({ state: "visible", timeout: 1000 });
     await this.page
       .getByRole("textbox", { name: PageConstants.TEXT_ENTER_CITY })
+      .click();
+    await this.page
+      .getByRole("textbox", { name: PageConstants.TEXT_ENTER_CITY })
       .type(PageConstants.TEXT_DUBAI);
     await this.page.getByText(PageConstants.TEXT_DUBAI).click();
   }
