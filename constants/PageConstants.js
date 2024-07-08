@@ -11,6 +11,7 @@ export const PageConstants = {
   TEXT_TO_ANYWHERE: "TO",
   TEXT_ENTER_CITY: "Enter City",
   TEXT_DUBAI: "Dubai, United Arab EmiratesDubai InternationalDXB",
+  TEXT_DATES_DURATION: "DATES & DURATION",
   TEXT_DEPARTURE: "DEPARTURE",
   TEXT_DECEMBER: "December",
   TEXT_YEAR_2024: "2024",

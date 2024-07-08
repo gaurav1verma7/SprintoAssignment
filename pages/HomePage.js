@@ -10,6 +10,8 @@ export class HomePage extends BasePage {
     await this.page
       .getByRole("link", { name: PageConstants.TEXT_FLIGHT, exact: true })
       .click();
+    const currentUrl = this.page.url();
+    expect(currentUrl.includes("flight")).toBeTruthy();
   }
 
   async clickRoundTrip() {
@@ -22,7 +24,7 @@ export class HomePage extends BasePage {
     await this.page.getByText(cityName, { exact: true }).click();
   }
 
-  async clickToandSelectInternationTrip() {
+  async clickToandSelectInternationalTrip() {
     await this.page.getByText(PageConstants.TEXT_TO, { exact: true }).click();
     await this.page
       .getByText(PageConstants.TEXT_PLANNING_INTERNATIONAL)

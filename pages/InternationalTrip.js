@@ -6,7 +6,7 @@ export class InternationalTrip {
     this.page = page;
     this.common = new Common(page);
   }
-  async clickAndSelectToCity(cityName) {
+  async clickAndSelectToCity(cityName = "") {
     await this.page
       .getByText(PageConstants.TEXT_TO_ANYWHERE, { exact: true })
       .click();
@@ -22,14 +22,16 @@ export class InternationalTrip {
     await this.page.getByText(PageConstants.TEXT_DUBAI).click();
   }
   async clickAndSelectDatesAndDeparture(monthName, numOfDays, thumb, slider) {
-    await this.page.getByText("DATES & DURATION").click();
+    await this.page.getByText(PageConstants.TEXT_DATES_DURATION).click();
     await this.page.getByText(monthName).click();
     await this.common.changeSlider(thumb, slider, numOfDays, 30);
   }
-  async applyDatesAndDepartureandSearch() {
+  async applyDatesAndDeparture() {
     await this.page
       .getByRole("button", { name: PageConstants.BTN_APPLY })
       .click();
+  }
+  async searchFlight() {
     await this.page
       .getByRole("button", { name: PageConstants.BTN_SEARCH })
       .click();
